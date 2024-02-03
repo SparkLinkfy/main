@@ -1,6 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Allura&family=Quicksand:wght@300;400;500;600;700&display=swap');
 
+@keyframes title-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -106,9 +119,11 @@ header #headline {
     font-size: 50px;
     margin-bottom: 40px;
     text-shadow: 0px 0px 10px black;
+    animation: title-fade-in 1.5s;
 }
 
 .header-image a {
+    animation: title-fade-in 1.5s;
     text-decoration: none;
     font-size: 20px;
     color: white;
@@ -157,10 +172,23 @@ header #headline {
     background-color: var(--primary-color);
 }
 
+.animate {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 .card img {
     height: 80%;
     width: 100%;
     border-radius: 12px;
+    object-position: center;
+    object-fit: cover;
 }
 
 .card div {
@@ -261,8 +289,7 @@ footer img:hover {
     .category span {
         display: flex;
         flex-direction: column;
-        margin-bottom: 20px;
-        margin-top: 20px;
+        margin: auto;
     }
 }
 
@@ -342,7 +369,7 @@ footer img:hover {
         background-color: transparent;
         border: 1px solid white;
         border-radius: 12px;
-        padding: 10px;
+        padding: 15px;
         transition: .2s;
     }
     
@@ -375,6 +402,8 @@ footer img:hover {
         height: 80%;
         width: 100%;
         border-radius: 12px;
+        object-position: center;
+        object-fit: cover;
     }
     
     .card div {

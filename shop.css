@@ -121,10 +121,23 @@ header #headline {
     background-color: var(--primary-color);
 }
 
+.animate {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 .card img {
     height: 80%;
     width: 100%;
     border-radius: 12px;
+    object-position: center;
+    object-fit: cover;
 }
 
 .card div {
@@ -225,8 +238,7 @@ footer img:hover {
     .category span {
         display: flex;
         flex-direction: column;
-        margin-bottom: 20px;
-        margin-top: 20px;
+        margin: auto;
     }
 }
 
@@ -309,6 +321,8 @@ footer img:hover {
         height: 80%;
         width: 100%;
         border-radius: 12px;
+        object-position: center;
+        object-fit: cover;
     }
     
     .card div {
